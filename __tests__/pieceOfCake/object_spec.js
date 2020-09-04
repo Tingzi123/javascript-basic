@@ -239,7 +239,7 @@ describe('for object', () => {
     expect(rabbit.speak('Hi')).toEqual(expected);
   });
 
-  fit('should overriding property of prototype for an instance', () => {
+  it('should overriding property of prototype for an instance', () => {
     class Rabbit {}
     const killerRabbit = new Rabbit();
     Rabbit.prototype.teeth = 'small';
@@ -263,7 +263,7 @@ describe('for object', () => {
     expect(Rabbit.prototype.teeth).toEqual(expectedRabbitPrototypeTeeth);
   });
 
-  it('should be the same for method overriding', () => {
+  fit('should be the same for method overriding', () => {
     class Rabbit {}
     const killerRabbit = new Rabbit();
     // eslint-disable-next-line func-names
@@ -271,7 +271,7 @@ describe('for object', () => {
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expectedKillerRabbitSpeak = undefined;
+    const expectedKillerRabbitSpeak = 'Hi';
     // --end->
 
     expect(killerRabbit.speak()).toEqual(expectedKillerRabbitSpeak);
@@ -281,8 +281,8 @@ describe('for object', () => {
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expectedOverrideKillerRabbitSpeak = undefined;
-    const expectedRabbitPrototypeSpeak = undefined;
+    const expectedOverrideKillerRabbitSpeak = '@_@';
+    const expectedRabbitPrototypeSpeak = 'Hi';
     // --end->
 
     expect(killerRabbit.speak()).toEqual(expectedOverrideKillerRabbitSpeak);
