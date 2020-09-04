@@ -37,7 +37,7 @@ describe('for asynchronous', () => {
     logs.push('after calling setTimeout');
   });
 
-  fit('should trigger failure using reject', (done) => {
+  it('should trigger failure using reject', (done) => {
     function asyncOperationThatWillFail() {
       return new Promise((_, reject) => reject(new Error('>_<')));
     }
@@ -56,7 +56,7 @@ describe('for asynchronous', () => {
       });
   });
 
-  it('should trigger failure using reject and handle using catch', (done) => {
+  fit('should trigger failure using reject and handle using catch', (done) => {
     function asyncOperationThatWillFail() {
       return new Promise((_, reject) => reject(new Error('>_<')));
     }
@@ -68,7 +68,7 @@ describe('for asynchronous', () => {
       .then(() => {
         // <--start
         // Please write down the correct value. You should write the final result directly.
-        const expected = undefined;
+        const expected = ['Caught! >_<'];
         // --end->
 
         expect(logs).toEqual(expected);
