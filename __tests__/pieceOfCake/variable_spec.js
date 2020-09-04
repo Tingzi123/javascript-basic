@@ -1,11 +1,11 @@
 describe('for variable', () => {
-  it('should have function scope for var variable', () => {
+  fit('should have function scope for var variable', () => {
     // eslint-disable-next-line vars-on-top, no-var, no-empty
     for (var i = 0; i <= 5; i += 1) { }
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = 6;
     // --end->
 
     // eslint-disable-next-line block-scoped-var
