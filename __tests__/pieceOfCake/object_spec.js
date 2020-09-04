@@ -50,7 +50,7 @@ describe('for object', () => {
     expect(Object.keys(person)).toEqual(expected);
   });
 
-  fit('should create object with braces expression', () => {
+  it('should create object with braces expression', () => {
     const person = {
       name: 'Bob',
       // eslint-disable-next-line object-shorthand, func-names
@@ -67,13 +67,13 @@ describe('for object', () => {
     expect(person.greeting()).toEqual(expected);
   });
 
-  it('should destruct object', () => {
+  fit('should destruct object', () => {
     const person = { name: 'Bob', yearOfBirth: 2019 };
     const { name } = person;
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = 'Bob';
     // --end->
 
     expect(name).toEqual(expected);
