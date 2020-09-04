@@ -315,7 +315,7 @@ describe('for object', () => {
     expect(Temperature.fromFahrenheit(86).celsius).toEqual(expectedCelsius);
   });
 
-  fit('should inherit from existing class', () => {
+  it('should inherit from existing class', () => {
     class Rabbit {
       constructor(type) { this.type = type; }
 
@@ -336,7 +336,7 @@ describe('for object', () => {
     expect(rabbit.speak()).toEqual(expectedSpeak);
   });
 
-  it('should determine whether an instance is derived from certain class', () => {
+  fit('should determine whether an instance is derived from certain class', () => {
     class Rabbit {
       constructor(type) { this.type = type; }
 
@@ -351,28 +351,28 @@ describe('for object', () => {
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const rabbitIsRabbit = undefined;
+    const rabbitIsRabbit = true;
     // --end->
 
     expect(rabbit instanceof Rabbit).toEqual(rabbitIsRabbit);
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const rabbitIsCrazyRabbit = undefined;
+    const rabbitIsCrazyRabbit = true;
     // --end-->
 
     expect(rabbit instanceof CrazyRabbit).toEqual(rabbitIsCrazyRabbit);
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const rabbitIsObject = undefined;
+    const rabbitIsObject = true;
     // --end-->
 
     expect(rabbit instanceof Object).toEqual(rabbitIsObject);
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const rabbitIsNumber = undefined;
+    const rabbitIsNumber = false;
     // --end-->
 
     expect(rabbit instanceof Number).toEqual(rabbitIsNumber);
