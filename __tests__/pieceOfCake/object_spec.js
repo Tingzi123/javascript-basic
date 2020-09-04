@@ -4,7 +4,8 @@ describe('for object', () => {
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expectedName = undefined;
+    console.log('Debug:', person.name);
+    const expectedName = 'Bob';
     // --end->
 
     expect(person.name).toEqual(expectedName);
@@ -12,12 +13,12 @@ describe('for object', () => {
     expect(person['name']).toEqual(expectedName);
   });
 
-  it('should get undefined if property is not defined', () => {
+  fit('should get undefined if property is not defined', () => {
     const person = { name: 'Bob' };
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = {};
+    const expected = { whatTheHellIsThat: undefined };
     // --end->
 
     expect(person.whatTheHellIsThat).toEqual(expected);
