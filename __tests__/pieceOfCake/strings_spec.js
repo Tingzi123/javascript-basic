@@ -1,13 +1,13 @@
 describe('for strings', () => {
-  it('should get character at certain position', () => {
+  fit('should get character at certain position', () => {
     const string = 'Hello';
     const characterWithinRange = string[1];
     const characterOutOfRange = string[10];
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expectedCharWithinRange = {};
-    const expectedCharOutOfRange = {};
+    const expectedCharWithinRange = 'e';
+    const expectedCharOutOfRange = undefined;
     // --end->
 
     expect(characterWithinRange).toEqual(expectedCharWithinRange);
