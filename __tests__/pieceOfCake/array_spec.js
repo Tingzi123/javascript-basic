@@ -1,5 +1,5 @@
 describe('for array', () => {
-  it('should get element of an array', () => {
+  fit('should get element of an array', () => {
     const array = [1, 2, 3, 4, 5];
 
     // <--start
