@@ -33,7 +33,7 @@ describe('for array', () => {
     expect(newArray).toEqual(expected);
   });
 
-  fit('should destruct array', () => {
+  it('should destruct array', () => {
     const [row, column] = [2, 3];
 
     // <--start
@@ -46,13 +46,13 @@ describe('for array', () => {
     expect(column).toEqual(expectedColumn);
   });
 
-  it('should filter array', () => {
+  fit('should filter array', () => {
     const numbers = [1, 2, 3, 4, 5];
     const filtered = numbers.filter(n => n % 2 === 0);
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = [2, 4];
     // --end->
 
     expect(filtered).toEqual(expected);
