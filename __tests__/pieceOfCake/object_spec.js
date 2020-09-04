@@ -25,7 +25,7 @@ describe('for object', () => {
     expect(person.whatTheHellIsThat).toEqual(expected);
   });
 
-  fit('should remove object property using delete operator', () => {
+  it('should remove object property using delete operator', () => {
     const person = { name: 'Bob' };
 
     // <--start
@@ -36,14 +36,15 @@ describe('for object', () => {
     expect(person.name).toBeUndefined();
   });
 
-  it('should be able to find all the keys', () => {
+  fit('should be able to find all the keys', () => {
     const person = {
       name: 'Bob', yearOfBirth: 2019,
     };
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    console.log('Debug', Object.keys(person));
+    const expected = ['name', 'yearOfBirth'];
     // --end->
 
     expect(Object.keys(person)).toEqual(expected);
