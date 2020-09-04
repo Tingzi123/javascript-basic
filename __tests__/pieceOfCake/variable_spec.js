@@ -1,5 +1,5 @@
 describe('for variable', () => {
-  fit('should have function scope for var variable', () => {
+  it('should have function scope for var variable', () => {
     // eslint-disable-next-line vars-on-top, no-var, no-empty
     for (var i = 0; i <= 5; i += 1) { }
 
@@ -12,7 +12,7 @@ describe('for variable', () => {
     expect(i).toEqual(expected);
   });
 
-  it('should have block scope for let and const variable', () => {
+  fit('should have block scope for let and const variable', () => {
     // eslint-disable-next-line prefer-const
     let i = 1000;
     // eslint-disable-next-line no-empty, no-shadow
@@ -20,7 +20,7 @@ describe('for variable', () => {
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = 1000;
     // --end->
 
     // eslint-disable-next-line no-undef
