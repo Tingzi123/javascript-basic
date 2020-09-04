@@ -1,10 +1,10 @@
 describe('for numbers', () => {
-  it('should use real number calculation rather than integer in some languages', () => {
+  fit('should use real number calculation rather than integer in some languages', () => {
     const dividingResult = 3 / 4;
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = 0.75;
     // --end->
 
     expect(dividingResult).toEqual(expected);
