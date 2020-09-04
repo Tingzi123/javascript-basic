@@ -222,7 +222,7 @@ describe('for object', () => {
     expect(prototypeOfRabbitFunction).toBe(expectedPrototypeOfRabbitFunction);
   });
 
-  it('should use the class notation rather than the awkward function', () => {
+  fit('should use the class notation rather than the awkward function', () => {
     class Rabbit {
       constructor(type) { this.type = type; }
 
@@ -233,7 +233,7 @@ describe('for object', () => {
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = 'The white rabbit says Hi.';
     // --end->
 
     expect(rabbit.speak('Hi')).toEqual(expected);
