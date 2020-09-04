@@ -1,5 +1,5 @@
 describe('for strings', () => {
-  fit('should get character at certain position', () => {
+  it('should get character at certain position', () => {
     const string = 'Hello';
     const characterWithinRange = string[1];
     const characterOutOfRange = string[10];
@@ -14,13 +14,13 @@ describe('for strings', () => {
     expect(characterOutOfRange).toEqual(expectedCharOutOfRange);
   });
 
-  it('should use template string to create strings', () => {
+  fit('should use template string to create strings', () => {
     const variable = 'World';
     const template = `Hello ${variable}`;
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = 'Hello World';
     // --end->
 
     expect(template).toEqual(expected);
