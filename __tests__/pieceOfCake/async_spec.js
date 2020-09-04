@@ -56,7 +56,7 @@ describe('for asynchronous', () => {
       });
   });
 
-  fit('should trigger failure using reject and handle using catch', (done) => {
+  it('should trigger failure using reject and handle using catch', (done) => {
     function asyncOperationThatWillFail() {
       return new Promise((_, reject) => reject(new Error('>_<')));
     }
@@ -76,7 +76,7 @@ describe('for asynchronous', () => {
       });
   });
 
-  it('should propagate the error as the way of the sync code', (done) => {
+  fit('should propagate the error as the way of the sync code', (done) => {
     function asyncOperationThatWillFail() {
       return new Promise((_, reject) => reject(new Error('>_<')));
     }
@@ -93,7 +93,7 @@ describe('for asynchronous', () => {
       .then(() => {
         // <--start
         // Please write down the correct value. You should write the final result directly.
-        const expected = undefined;
+        const expected = ['Caught! >_<', 'Continued', 'Another continued', 'Error handled: Holy ~'];
         // --end->
         expect(logs).toEqual(expected);
         done();
