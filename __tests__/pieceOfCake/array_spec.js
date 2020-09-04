@@ -46,7 +46,7 @@ describe('for array', () => {
     expect(column).toEqual(expectedColumn);
   });
 
-  fit('should filter array', () => {
+  it('should filter array', () => {
     const numbers = [1, 2, 3, 4, 5];
     const filtered = numbers.filter(n => n % 2 === 0);
 
@@ -58,13 +58,14 @@ describe('for array', () => {
     expect(filtered).toEqual(expected);
   });
 
-  it('should map array element to other value', () => {
+  fit('should map array element to other value', () => {
     const numbers = [1, 2, 3, 4, 5];
     const mapped = numbers.map((n, i) => `Unit ${n} for element at index ${i}`);
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    console.log('Debug', mapped);
+    const expected = ['Unit 1 for element at index 0', 'Unit 2 for element at index 1', 'Unit 3 for element at index 2', 'Unit 4 for element at index 3', 'Unit 5 for element at index 4'];
     // --end->
 
     expect(mapped).toEqual(expected);
