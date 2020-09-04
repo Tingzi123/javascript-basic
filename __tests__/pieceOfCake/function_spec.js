@@ -32,7 +32,7 @@ describe('for function', () => {
     expect(greeting(sayHello, 'World')).toEqual(expected);
   });
 
-  fit('should allow optional arguments for any function', () => {
+  it('should allow optional arguments for any function', () => {
     function square(x) { return x * x; }
 
     // <--start
@@ -43,7 +43,7 @@ describe('for function', () => {
     expect(square(6, 'Hello', 4)).toEqual(expected);
   });
 
-  it('should be undefined for not specified parameter', () => {
+  fit('should be undefined for not specified parameter', () => {
     function minus(left, right) {
       if (right === undefined) { return -left; }
       return left - right;
@@ -51,8 +51,8 @@ describe('for function', () => {
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expectedForSingleArgument = undefined;
-    const expectedForTwoArguments = undefined;
+    const expectedForSingleArgument = -5;
+    const expectedForTwoArguments = 2;
     // --end->
 
     expect(minus(5)).toEqual(expectedForSingleArgument);
