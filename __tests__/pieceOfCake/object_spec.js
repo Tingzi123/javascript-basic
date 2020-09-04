@@ -79,7 +79,7 @@ describe('for object', () => {
     expect(name).toEqual(expected);
   });
 
-  fit('should serialize object to JSON', () => {
+  it('should serialize object to JSON', () => {
     const person = { name: 'Bob', yearOfBirth: 2019 };
     const json = JSON.stringify(person);
 
@@ -91,13 +91,13 @@ describe('for object', () => {
     expect(json).toEqual(expected);
   });
 
-  it('should parse JSON to object', () => {
+  fit('should parse JSON to object', () => {
     const json = '{"color":"Red","value":"#ff0000"}';
     const color = JSON.parse(json);
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = { color: 'Red', value: '#ff0000' };
     // --end->
 
     expect(color).toEqual(expected);
