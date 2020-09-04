@@ -26,7 +26,7 @@ describe('for strings', () => {
     expect(template).toEqual(expected);
   });
 
-  fit('should get substring', () => {
+  it('should get substring', () => {
     const string = 'coconuts';
 
     // <--start
@@ -37,12 +37,12 @@ describe('for strings', () => {
     expect(string.slice(4, 7)).toEqual(expected);
   });
 
-  it('should get first index of a string', () => {
+  fit('should get first index of a string', () => {
     const string = 'coconuts';
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = 5;
     // --end->
 
     expect(string.indexOf('ut')).toEqual(expected);
