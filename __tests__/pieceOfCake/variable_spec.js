@@ -12,7 +12,7 @@ describe('for variable', () => {
     expect(i).toEqual(expected);
   });
 
-  fit('should have block scope for let and const variable', () => {
+  it('should have block scope for let and const variable', () => {
     // eslint-disable-next-line prefer-const
     let i = 1000;
     // eslint-disable-next-line no-empty, no-shadow
@@ -33,7 +33,7 @@ describe('for variable', () => {
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = 'new name';
     // --end->
 
     expect(constVariable.name).toEqual(expected);
