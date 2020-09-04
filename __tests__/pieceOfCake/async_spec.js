@@ -76,7 +76,7 @@ describe('for asynchronous', () => {
       });
   });
 
-  fit('should propagate the error as the way of the sync code', (done) => {
+  it('should propagate the error as the way of the sync code', (done) => {
     function asyncOperationThatWillFail() {
       return new Promise((_, reject) => reject(new Error('>_<')));
     }
