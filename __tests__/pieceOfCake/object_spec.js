@@ -67,7 +67,7 @@ describe('for object', () => {
     expect(person.greeting()).toEqual(expected);
   });
 
-  fit('should destruct object', () => {
+  it('should destruct object', () => {
     const person = { name: 'Bob', yearOfBirth: 2019 };
     const { name } = person;
 
@@ -79,13 +79,13 @@ describe('for object', () => {
     expect(name).toEqual(expected);
   });
 
-  it('should serialize object to JSON', () => {
+  fit('should serialize object to JSON', () => {
     const person = { name: 'Bob', yearOfBirth: 2019 };
     const json = JSON.stringify(person);
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = '{"name":"Bob","yearOfBirth":2019}';
     // --end->
 
     expect(json).toEqual(expected);
