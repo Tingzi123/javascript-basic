@@ -48,7 +48,7 @@ describe('for strings', () => {
     expect(string.indexOf('ut')).toEqual(expected);
   });
 
-  fit('should be able to trim string', () => {
+  it('should be able to trim string', () => {
     const string = ' coconuts \n';
 
     // <--start
@@ -59,13 +59,13 @@ describe('for strings', () => {
     expect(string.trim()).toEqual(expected);
   });
 
-  it('should split string', () => {
+  fit('should split string', () => {
     const words = 'what a beautiful    day';
     const splitted = words.split(' ');
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = ['what', 'a', 'beautiful', '', '', '', 'day'];
     // --end->
 
     expect(splitted).toEqual(expected);
