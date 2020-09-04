@@ -21,7 +21,7 @@ describe('for array', () => {
     expect(array).toEqual([1, 2, 3, 4, 5, 6, 7, 8]);
   });
 
-  fit('should be able to spread to array elements', () => {
+  it('should be able to spread to array elements', () => {
     const array = [1, 2, 3, 4, 5];
     const newArray = [9, ...array, 10];
 
@@ -33,13 +33,13 @@ describe('for array', () => {
     expect(newArray).toEqual(expected);
   });
 
-  it('should destruct array', () => {
+  fit('should destruct array', () => {
     const [row, column] = [2, 3];
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expectedRow = undefined;
-    const expectedColumn = undefined;
+    const expectedRow = 2;
+    const expectedColumn = 3;
     // --end->
 
     expect(row).toEqual(expectedRow);
