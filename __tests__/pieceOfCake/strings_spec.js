@@ -71,7 +71,7 @@ describe('for strings', () => {
     expect(splitted).toEqual(expected);
   });
 
-  fit('should join strings', () => {
+  it('should join strings', () => {
     const splitted = ['what', 'a', 'beautiful', 'day'];
 
     // <--start
@@ -82,12 +82,12 @@ describe('for strings', () => {
     expect(splitted.join('->')).toEqual(expected);
   });
 
-  it('should be aware to the codepoint larger than 16-bit', () => {
+  fit('should be aware to the codepoint larger than 16-bit', () => {
     const emoji = '🐴👟';
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = 4;
     // --end->
 
     expect(emoji.length).toEqual(expected);
