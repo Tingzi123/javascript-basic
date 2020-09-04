@@ -1,5 +1,5 @@
 describe('for boolean type', () => {
-  it('should convert to same type then compare for equality operator', () => {
+  fit('should convert to same type then compare for equality operator', () => {
     const objectLeft = { key: 'value' };
     const objectRight = { key: 'value' };
 
@@ -10,7 +10,7 @@ describe('for boolean type', () => {
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = [true, true, true, true, false, false, false, true];
     // --end->
 
     expect(actual).toEqual(expected);
