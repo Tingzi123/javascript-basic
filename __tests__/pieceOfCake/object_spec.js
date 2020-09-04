@@ -160,7 +160,7 @@ describe('for object', () => {
     expect(Object.getPrototypeOf(emptyObject)).toBe(expected);
   });
 
-  fit('should get null for object prototype\'s prototype', () => {
+  it('should get null for object prototype\'s prototype', () => {
     const objectPrototype = Object.prototype;
 
     // <--start
@@ -171,7 +171,7 @@ describe('for object', () => {
     expect(Object.getPrototypeOf(objectPrototype)).toEqual(expected);
   });
 
-  it('should be able to create object with specified prototype', () => {
+  fit('should be able to create object with specified prototype', () => {
     const rabbitPrototype = {
       speak(line) { return `The ${this.type} rabbit says ${line}.`; },
     };
@@ -182,7 +182,7 @@ describe('for object', () => {
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = 'The killer rabbit says SKREEEE.';
     // --end->
 
     expect(words).toEqual(expected);
