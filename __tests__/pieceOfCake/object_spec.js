@@ -289,7 +289,7 @@ describe('for object', () => {
     expect(Rabbit.prototype.speak()).toEqual(expectedRabbitPrototypeSpeak);
   });
 
-  fit('should be able to define getter and setter and static method', () => {
+  it('should be able to define getter and setter and static method', () => {
     class Temperature {
       constructor(celsius) { this.celsius = celsius; }
 
@@ -315,7 +315,7 @@ describe('for object', () => {
     expect(Temperature.fromFahrenheit(86).celsius).toEqual(expectedCelsius);
   });
 
-  it('should inherit from existing class', () => {
+  fit('should inherit from existing class', () => {
     class Rabbit {
       constructor(type) { this.type = type; }
 
@@ -330,7 +330,7 @@ describe('for object', () => {
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expectedSpeak = undefined;
+    const expectedSpeak = 'I am crazy white rabbit';
     // --end->
 
     expect(rabbit.speak()).toEqual(expectedSpeak);
