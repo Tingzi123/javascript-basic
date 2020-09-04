@@ -222,7 +222,7 @@ describe('for object', () => {
     expect(prototypeOfRabbitFunction).toBe(expectedPrototypeOfRabbitFunction);
   });
 
-  fit('should use the class notation rather than the awkward function', () => {
+  it('should use the class notation rather than the awkward function', () => {
     class Rabbit {
       constructor(type) { this.type = type; }
 
@@ -239,14 +239,14 @@ describe('for object', () => {
     expect(rabbit.speak('Hi')).toEqual(expected);
   });
 
-  it('should overriding property of prototype for an instance', () => {
+  fit('should overriding property of prototype for an instance', () => {
     class Rabbit {}
     const killerRabbit = new Rabbit();
     Rabbit.prototype.teeth = 'small';
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expectedKillerRabbitTeeth = undefined;
+    const expectedKillerRabbitTeeth = 'small';
     // --end->
 
     expect(killerRabbit.teeth).toEqual(expectedKillerRabbitTeeth);
@@ -255,8 +255,8 @@ describe('for object', () => {
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expectedOverrideKillerRabbitTeeth = undefined;
-    const expectedRabbitPrototypeTeeth = undefined;
+    const expectedOverrideKillerRabbitTeeth = 'sharp';
+    const expectedRabbitPrototypeTeeth = 'small';
     // --end->
 
     expect(killerRabbit.teeth).toEqual(expectedOverrideKillerRabbitTeeth);
