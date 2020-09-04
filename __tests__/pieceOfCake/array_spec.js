@@ -10,7 +10,7 @@ describe('for array', () => {
     expect(array[2]).toEqual(expected);
   });
 
-  fit('should be able to push elements into array', () => {
+  it('should be able to push elements into array', () => {
     const array = [1, 2, 3, 4, 5];
 
     // <--start
@@ -21,13 +21,13 @@ describe('for array', () => {
     expect(array).toEqual([1, 2, 3, 4, 5, 6, 7, 8]);
   });
 
-  it('should be able to spread to array elements', () => {
+  fit('should be able to spread to array elements', () => {
     const array = [1, 2, 3, 4, 5];
     const newArray = [9, ...array, 10];
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = [9, 1, 2, 3, 4, 5, 10];
     // --end->
 
     expect(newArray).toEqual(expected);
