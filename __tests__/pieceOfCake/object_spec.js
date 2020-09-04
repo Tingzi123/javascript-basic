@@ -91,7 +91,7 @@ describe('for object', () => {
     expect(json).toEqual(expected);
   });
 
-  fit('should parse JSON to object', () => {
+  it('should parse JSON to object', () => {
     const json = '{"color":"Red","value":"#ff0000"}';
     const color = JSON.parse(json);
 
@@ -103,7 +103,7 @@ describe('for object', () => {
     expect(color).toEqual(expected);
   });
 
-  it('should point to the object it was called on for "this" in a method', () => {
+  fit('should point to the object it was called on for "this" in a method', () => {
     function speak(line) {
       return `The ${this.type} rabbit says ${line}.`;
     }
@@ -111,7 +111,7 @@ describe('for object', () => {
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = 'The white rabbit says Hello.';
     // --end->
 
     expect(rabbit.speak('Hello')).toEqual(expected);
