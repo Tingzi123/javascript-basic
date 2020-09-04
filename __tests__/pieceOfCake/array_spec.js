@@ -1,5 +1,5 @@
 describe('for array', () => {
-  fit('should get element of an array', () => {
+  it('should get element of an array', () => {
     const array = [1, 2, 3, 4, 5];
 
     // <--start
@@ -10,12 +10,12 @@ describe('for array', () => {
     expect(array[2]).toEqual(expected);
   });
 
-  it('should be able to push elements into array', () => {
+  fit('should be able to push elements into array', () => {
     const array = [1, 2, 3, 4, 5];
 
     // <--start
     // Please write one line of code to push some elements in the array to pass the test
-
+    array.push(6, 7, 8);
     // --end->
 
     expect(array).toEqual([1, 2, 3, 4, 5, 6, 7, 8]);
