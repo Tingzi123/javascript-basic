@@ -171,7 +171,7 @@ describe('for object', () => {
     expect(Object.getPrototypeOf(objectPrototype)).toEqual(expected);
   });
 
-  fit('should be able to create object with specified prototype', () => {
+  it('should be able to create object with specified prototype', () => {
     const rabbitPrototype = {
       speak(line) { return `The ${this.type} rabbit says ${line}.`; },
     };
@@ -188,7 +188,7 @@ describe('for object', () => {
     expect(words).toEqual(expected);
   });
 
-  it('should simulate constructor using function, and use function\'s prototype as definition', () => {
+  fit('should simulate constructor using function, and use function\'s prototype as definition', () => {
     function Rabbit(type) { this.type = type; }
     // eslint-disable-next-line func-names
     Rabbit.prototype.speak = function (line) { return `The ${this.type} rabbit says ${line}.`; };
@@ -197,7 +197,8 @@ describe('for object', () => {
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    // console.log('Debug', rabbit.speak('?_?'));
+    const expected = 'The weird rabbit says ?_?.';
     // --end->
 
     expect(rabbit.speak('?_?')).toEqual(expected);
@@ -213,8 +214,8 @@ describe('for object', () => {
     // * rabbitFunctionPrototype
     // * prototypeOfRabbitFunction
     // * functionPrototype
-    const expectedPrototypeOfRabbitInstance = undefined;
-    const expectedPrototypeOfRabbitFunction = undefined;
+    const expectedPrototypeOfRabbitInstance = rabbitFunctionPrototype;
+    const expectedPrototypeOfRabbitFunction = functionPrototype;
     // --end->
 
     expect(prototypeOfRabbitInstance).toBe(expectedPrototypeOfRabbitInstance);
