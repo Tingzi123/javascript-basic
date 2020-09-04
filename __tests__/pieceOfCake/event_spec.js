@@ -16,7 +16,7 @@ describe('for event', () => {
 
     // <--start
     // Please add the event listener to handle `click` event on `element`.
-
+    element.addListener('click', () => onClick());
     // --end->
 
     element.emit('click');
@@ -42,7 +42,7 @@ describe('for event', () => {
       });
   });
 
-  fit('should remove event listener', (done) => {
+  it('should remove event listener', (done) => {
     const element = new EventEmitter();
     const logs = [];
 
