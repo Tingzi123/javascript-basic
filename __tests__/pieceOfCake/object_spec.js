@@ -117,7 +117,7 @@ describe('for object', () => {
     expect(rabbit.speak('Hello')).toEqual(expected);
   });
 
-  fit('should explicitly specify this using call method', () => {
+  it('should explicitly specify this using call method', () => {
     function speak(line) {
       return `The ${this.type} rabbit says ${line}.`;
     }
@@ -133,7 +133,7 @@ describe('for object', () => {
     expect(rabbit.speak('Hello')).toEqual(expected);
   });
 
-  it('should capture this in the scope around it for arrow function', () => {
+  fit('should capture this in the scope around it for arrow function', () => {
     function normalize() {
       return this.coords.map(n => n / this.length);
     }
@@ -142,7 +142,7 @@ describe('for object', () => {
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = [0, 2, 3];
     // --end->
 
     expect(actual).toEqual(expected);
