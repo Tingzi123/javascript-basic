@@ -37,7 +37,7 @@ describe('for strings', () => {
     expect(string.slice(4, 7)).toEqual(expected);
   });
 
-  fit('should get first index of a string', () => {
+  it('should get first index of a string', () => {
     const string = 'coconuts';
 
     // <--start
@@ -48,12 +48,12 @@ describe('for strings', () => {
     expect(string.indexOf('ut')).toEqual(expected);
   });
 
-  it('should be able to trim string', () => {
+  fit('should be able to trim string', () => {
     const string = ' coconuts \n';
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = 'coconuts';
     // --end->
 
     expect(string.trim()).toEqual(expected);
