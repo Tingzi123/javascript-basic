@@ -336,7 +336,7 @@ describe('for object', () => {
     expect(rabbit.speak()).toEqual(expectedSpeak);
   });
 
-  fit('should determine whether an instance is derived from certain class', () => {
+  it('should determine whether an instance is derived from certain class', () => {
     class Rabbit {
       constructor(type) { this.type = type; }
 
