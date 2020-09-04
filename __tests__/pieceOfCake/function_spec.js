@@ -1,5 +1,5 @@
 describe('for function', () => {
-  fit('should be able to define function in function scope', () => {
+  it('should be able to define function in function scope', () => {
     function outerFunction() {
       const myName = 'World';
       function innerFunction() {
@@ -17,7 +17,7 @@ describe('for function', () => {
     expect(outerFunction()).toEqual(expected);
   });
 
-  it('should pass function as value', () => {
+  fit('should pass function as value', () => {
     const sayHello = () => 'Hello';
 
     function greeting(prefixGenerator, name) {
@@ -26,7 +26,7 @@ describe('for function', () => {
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = 'Hello World';
     // --end->
 
     expect(greeting(sayHello, 'World')).toEqual(expected);
