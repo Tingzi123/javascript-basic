@@ -59,7 +59,7 @@ describe('for strings', () => {
     expect(string.trim()).toEqual(expected);
   });
 
-  fit('should split string', () => {
+  it('should split string', () => {
     const words = 'what a beautiful    day';
     const splitted = words.split(' ');
 
@@ -71,12 +71,12 @@ describe('for strings', () => {
     expect(splitted).toEqual(expected);
   });
 
-  it('should join strings', () => {
+  fit('should join strings', () => {
     const splitted = ['what', 'a', 'beautiful', 'day'];
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = 'what->a->beautiful->day';
     // --end->
 
     expect(splitted.join('->')).toEqual(expected);
