@@ -17,7 +17,7 @@ describe('for function', () => {
     expect(outerFunction()).toEqual(expected);
   });
 
-  fit('should pass function as value', () => {
+  it('should pass function as value', () => {
     const sayHello = () => 'Hello';
 
     function greeting(prefixGenerator, name) {
@@ -32,12 +32,12 @@ describe('for function', () => {
     expect(greeting(sayHello, 'World')).toEqual(expected);
   });
 
-  it('should allow optional arguments for any function', () => {
+  fit('should allow optional arguments for any function', () => {
     function square(x) { return x * x; }
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = 36;
     // --end->
 
     expect(square(6, 'Hello', 4)).toEqual(expected);
