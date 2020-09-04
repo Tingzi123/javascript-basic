@@ -1,5 +1,5 @@
 describe('for numbers', () => {
-  fit('should use real number calculation rather than integer in some languages', () => {
+  it('should use real number calculation rather than integer in some languages', () => {
     const dividingResult = 3 / 4;
 
     // <--start
@@ -15,7 +15,7 @@ describe('for numbers', () => {
 
     // <--start
     // Please write an expression determine if `notNumber` is NaN.
-    const isNan = undefined;
+    const isNan = Number.isNaN(notNumber);
     // --end->
 
     expect(isNan).toBeTruthy();
