@@ -263,7 +263,7 @@ describe('for object', () => {
     expect(Rabbit.prototype.teeth).toEqual(expectedRabbitPrototypeTeeth);
   });
 
-  fit('should be the same for method overriding', () => {
+  it('should be the same for method overriding', () => {
     class Rabbit {}
     const killerRabbit = new Rabbit();
     // eslint-disable-next-line func-names
@@ -289,7 +289,7 @@ describe('for object', () => {
     expect(Rabbit.prototype.speak()).toEqual(expectedRabbitPrototypeSpeak);
   });
 
-  it('should be able to define getter and setter and static method', () => {
+  fit('should be able to define getter and setter and static method', () => {
     class Temperature {
       constructor(celsius) { this.celsius = celsius; }
 
@@ -302,14 +302,14 @@ describe('for object', () => {
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expectedFahrenheit = undefined;
+    const expectedFahrenheit = 71.6;
     // --end->
 
     expect(new Temperature(22).fahrenheit).toEqual(expectedFahrenheit);
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expectedCelsius = undefined;
+    const expectedCelsius = 30;
     // --end->
 
     expect(Temperature.fromFahrenheit(86).celsius).toEqual(expectedCelsius);
