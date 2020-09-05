@@ -134,7 +134,7 @@ describe('for function', () => {
     expect(actual).toEqual(expected);
   });
 
-  fit('should change captured variable', () => {
+  it('should change captured variable', () => {
     let guessIfIAmChanged = 'Origin';
 
     function wrapValue() {
@@ -151,7 +151,7 @@ describe('for function', () => {
     expect(guessIfIAmChanged).toEqual(expected);
   });
 
-  it('should create some recursion trick', () => {
+  fit('should create some recursion trick', () => {
     function findSolution(target) {
       function find(current, history) {
         // eslint-disable-next-line eqeqeq
@@ -166,7 +166,7 @@ describe('for function', () => {
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = '(((1 * 3) + 5) * 3)';
     // --end->
 
     expect(findSolution(24)).toEqual(expected);
