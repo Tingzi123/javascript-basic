@@ -43,7 +43,7 @@ describe('for function', () => {
     expect(square(6, 'Hello', 4)).toEqual(expected);
   });
 
-  fit('should be undefined for not specified parameter', () => {
+  it('should be undefined for not specified parameter', () => {
     function minus(left, right) {
       if (right === undefined) { return -left; }
       return left - right;
@@ -59,7 +59,7 @@ describe('for function', () => {
     expect(minus(5, 3)).toEqual(expectedForTwoArguments);
   });
 
-  it('should specify default parameters', () => {
+  fit('should specify default parameters', () => {
     function power(base, exponent = 2) {
       let result = 1;
       for (let count = 0; count < exponent; count += 1) {
@@ -70,7 +70,7 @@ describe('for function', () => {
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = 16;
     // --end->
 
     expect(power(4)).toEqual(expected);
