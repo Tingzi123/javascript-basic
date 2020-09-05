@@ -97,7 +97,7 @@ describe('for function', () => {
     expect(guessIfIAmChanged).toEqual(expectedWord);
   });
 
-  fit('should modify the content of the variable', () => {
+  it('should modify the content of the variable', () => {
     const person = {};
     // eslint-disable-next-line no-shadow
     function addName(person, name) {
@@ -118,7 +118,7 @@ describe('for function', () => {
     expect(returnValue.name).toEqual(expectedReturnValueName);
   });
 
-  it('should capture local variables', () => {
+  fit('should capture local variables', () => {
     function wrapValue() {
       const localVariable = 'Hello';
       return () => localVariable;
@@ -128,7 +128,7 @@ describe('for function', () => {
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = 'Hello';
     // --end->
 
     expect(actual).toEqual(expected);
