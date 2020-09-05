@@ -244,7 +244,7 @@ describe('for function', () => {
     expect(labels).toEqual(expected);
   });
 
-  fit('should create higher order function', () => {
+  it('should create higher order function', () => {
     function greaterThan(n) {
       return value => value > n;
     }
@@ -259,7 +259,7 @@ describe('for function', () => {
     expect(greaterThan10(3)).toEqual(expected);
   });
 
-  it('should not make you crazy with high order function', () => {
+  fit('should not make you crazy with high order function', () => {
     function noisy(f) {
       return (...args) => f(...args);
     }
@@ -269,7 +269,7 @@ describe('for function', () => {
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = 11;
     // --end->
 
     expect(actual).toEqual(expected);
