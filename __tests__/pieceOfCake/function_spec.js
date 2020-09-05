@@ -59,7 +59,7 @@ describe('for function', () => {
     expect(minus(5, 3)).toEqual(expectedForTwoArguments);
   });
 
-  fit('should specify default parameters', () => {
+  it('should specify default parameters', () => {
     function power(base, exponent = 2) {
       let result = 1;
       for (let count = 0; count < exponent; count += 1) {
@@ -76,7 +76,7 @@ describe('for function', () => {
     expect(power(4)).toEqual(expected);
   });
 
-  it('should not modify the original variable', () => {
+  fit('should not modify the original variable', () => {
     // eslint-disable-next-line prefer-const
     let guessIfIAmChanged = 'Origin';
     function transferToAnotherWord(word) {
@@ -89,8 +89,8 @@ describe('for function', () => {
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expectedReturnValue = undefined;
-    const expectedWord = undefined;
+    const expectedReturnValue = 'Changed';
+    const expectedWord = 'Origin';
     // --end->
 
     expect(returnValue).toEqual(expectedReturnValue);
