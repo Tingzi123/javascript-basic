@@ -275,7 +275,7 @@ describe('for function', () => {
     expect(actual).toEqual(expected);
   });
 
-  fit('should not make you crazy even we change the control flow', () => {
+  it('should not make you crazy even we change the control flow', () => {
     function unless(test, then) { if (!test) then(); }
     function repeat(n, action) {
       for (let i = 0; i < n; i += 1) { action(i); }
