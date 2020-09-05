@@ -229,7 +229,7 @@ describe('for function', () => {
     expect(actual).toEqual(expected);
   });
 
-  fit('should pass pre-defined function as callback', () => {
+  it('should pass pre-defined function as callback', () => {
     function repeat(n, action) {
       for (let i = 0; i < n; i += 1) { action(i); }
     }
@@ -244,7 +244,7 @@ describe('for function', () => {
     expect(labels).toEqual(expected);
   });
 
-  it('should create higher order function', () => {
+  fit('should create higher order function', () => {
     function greaterThan(n) {
       return value => value > n;
     }
@@ -253,7 +253,7 @@ describe('for function', () => {
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = false;
     // --end->
 
     expect(greaterThan10(3)).toEqual(expected);
