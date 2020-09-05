@@ -151,7 +151,7 @@ describe('for function', () => {
     expect(guessIfIAmChanged).toEqual(expected);
   });
 
-  fit('should create some recursion trick', () => {
+  it('should create some recursion trick', () => {
     function findSolution(target) {
       function find(current, history) {
         // eslint-disable-next-line eqeqeq
@@ -172,7 +172,7 @@ describe('for function', () => {
     expect(findSolution(24)).toEqual(expected);
   });
 
-  it('should accept any number of parameters', () => {
+  fit('should accept any number of parameters', () => {
     function sum(...numbers) {
       let result = 0;
       for (let i = 0; i < numbers.length; i += 1) {
@@ -183,7 +183,7 @@ describe('for function', () => {
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = 6;
     // --end->
 
     expect(sum(1, 2, 3)).toEqual(expected);
