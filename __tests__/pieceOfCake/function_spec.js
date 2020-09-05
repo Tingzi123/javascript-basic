@@ -189,7 +189,7 @@ describe('for function', () => {
     expect(sum(1, 2, 3)).toEqual(expected);
   });
 
-  fit('should also use 3 dot notation to call function with rest parameters', () => {
+  it('should also use 3 dot notation to call function with rest parameters', () => {
     function sum(...numbers) {
       let result = 0;
       for (let i = 0; i < numbers.length; i += 1) {
@@ -209,7 +209,7 @@ describe('for function', () => {
     expect(actual).toEqual(expected);
   });
 
-  it('should be able to passing parameters in mixed way', () => {
+  fit('should be able to passing parameters in mixed way', () => {
     function sum(...numbers) {
       let result = 0;
       for (let i = 0; i < numbers.length; i += 1) {
@@ -223,7 +223,7 @@ describe('for function', () => {
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = 25;
     // --end->
 
     expect(actual).toEqual(expected);
@@ -238,7 +238,7 @@ describe('for function', () => {
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = [0, 3, 6];
     // --end->
 
     expect(labels).toEqual(expected);
