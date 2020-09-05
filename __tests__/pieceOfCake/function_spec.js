@@ -118,7 +118,7 @@ describe('for function', () => {
     expect(returnValue.name).toEqual(expectedReturnValueName);
   });
 
-  fit('should capture local variables', () => {
+  it('should capture local variables', () => {
     function wrapValue() {
       const localVariable = 'Hello';
       return () => localVariable;
@@ -134,7 +134,7 @@ describe('for function', () => {
     expect(actual).toEqual(expected);
   });
 
-  it('should change captured variable', () => {
+  fit('should change captured variable', () => {
     let guessIfIAmChanged = 'Origin';
 
     function wrapValue() {
@@ -145,7 +145,7 @@ describe('for function', () => {
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = 'Changed';
     // --end->
 
     expect(guessIfIAmChanged).toEqual(expected);
