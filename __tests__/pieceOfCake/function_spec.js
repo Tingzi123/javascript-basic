@@ -172,7 +172,7 @@ describe('for function', () => {
     expect(findSolution(24)).toEqual(expected);
   });
 
-  fit('should accept any number of parameters', () => {
+  it('should accept any number of parameters', () => {
     function sum(...numbers) {
       let result = 0;
       for (let i = 0; i < numbers.length; i += 1) {
@@ -189,7 +189,7 @@ describe('for function', () => {
     expect(sum(1, 2, 3)).toEqual(expected);
   });
 
-  it('should also use 3 dot notation to call function with rest parameters', () => {
+  fit('should also use 3 dot notation to call function with rest parameters', () => {
     function sum(...numbers) {
       let result = 0;
       for (let i = 0; i < numbers.length; i += 1) {
@@ -200,7 +200,7 @@ describe('for function', () => {
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = 6;
     // --end->
 
     const parameters = [1, 2, 3];
