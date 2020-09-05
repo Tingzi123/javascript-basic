@@ -209,7 +209,7 @@ describe('for function', () => {
     expect(actual).toEqual(expected);
   });
 
-  fit('should be able to passing parameters in mixed way', () => {
+  it('should be able to passing parameters in mixed way', () => {
     function sum(...numbers) {
       let result = 0;
       for (let i = 0; i < numbers.length; i += 1) {
@@ -229,7 +229,7 @@ describe('for function', () => {
     expect(actual).toEqual(expected);
   });
 
-  it('should pass pre-defined function as callback', () => {
+  fit('should pass pre-defined function as callback', () => {
     function repeat(n, action) {
       for (let i = 0; i < n; i += 1) { action(i); }
     }
